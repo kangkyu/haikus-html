@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3001/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"johndoe@email.com","password":"secret"}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1fea93f78c3a6959ce3b7ef7d54864dd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5df55870-c2e8-4d63-966c-0f4427a6f855
+      X-Runtime:
+      - '0.076551'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.2/2015-04-13)
+      Date:
+      - Mon, 30 Nov 2015 04:06:40 GMT
+      Content-Length:
+      - '205'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"21","type":"users","attributes":{"email":"johndoe@email.com","password_hash":"$2a$10$Q0mvovXiveRzuyrN/4hVcOnqKuwvhGI7Ob7VB9ErL/5725YrfAO8e","password_salt":"$2a$10$Q0mvovXiveRzuyrN/4hVcO"}}}'
+    http_version: 
+  recorded_at: Mon, 30 Nov 2015 04:06:40 GMT
+recorded_with: VCR 3.0.0
