@@ -14,7 +14,6 @@ gem 'httparty'
 
 group :development, :test do
   gem 'byebug'
-  gem 'sqlite3'
   gem 'rspec-rails', '~> 3.0'
   gem 'simplecov', :require => false
   gem 'vcr'
