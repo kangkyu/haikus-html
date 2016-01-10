@@ -3,8 +3,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    haikus_api = HaikusApi.new('179d22fec2986939ad11ea1c9f884c6f')
-    haikus_api.create_user(user_params)
+    HaikusApi.create_user(user_params)
     # change render to redirect haikus#index when possible
     render 'new'
   end

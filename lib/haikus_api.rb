@@ -4,11 +4,9 @@ class HaikusApi
   format :json
   base_uri 'localhost:3001'
 
-  def initialize(token)
-    @auth = {"Authorization" => "Token token=#{token}"}
-  end
+  headers "Authorization" => "Token token=#{ENV['HAIKUS_API_ACCESS_TOKEN']}"
 
-  def create_user(user_params)
-    self.class.post("/users", body: user_params.to_json, headers: @auth)
+  def self.create_user(user_params)
+    post("/users", body: user_params.to_json)
   end
 end
