@@ -10,8 +10,7 @@ class HaikusApi
     post("/users", body: user_params.to_json)
   end
 
-  def list_haikus(options={})
-    options.merge!(headers: @auth)
-    self.class.get("/haikus", options).parsed_response
+  def self.list_haikus(options={})
+    get("/haikus", options).parsed_response
   end
 end
