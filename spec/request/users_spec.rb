@@ -11,7 +11,7 @@ end
 describe 'POST /users', type: :request do
   it "creates a user" do
     VCR.use_cassette('user cassette') do
-      post "/users", { 'email': 'johndoe@email.com', 'password': 'secret' }
+      post "/users", user: { 'email': 'johndoe@email.com', 'password': 'secret' }
       expect(response.status).to eq(200)
       expect(response.body).to include("<h1>Create User</h1>")
     end

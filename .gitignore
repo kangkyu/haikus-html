@@ -16,3 +16,6 @@
 !/log/.keep
 /tmp
 /spec/simplecov
+
+# dotenv environment variables
+.env
