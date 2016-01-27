@@ -1,21 +1,20 @@
 # haikus-html
 
+This is a clone of the project practice named "Haikus", which was a pair of two rails app: frontend **haikus-html** and backend **haikus-api**
+
 ## Instructions:
 
-get [**haikus-api**](https://github.com/charliemcelfresh/haikus-api) running
+get **haikus-api** running with `--port=3001` (this is hard-coded in **haikus-html** for development) and also run haikus-html
 
 ```sh
-git clone https://github.com/charliemcelfresh/haikus-api.git
+cd path/to/haikus-api
 rails s -p 3001
-```
-get haikus-html running
-
-```
-git clone https://github.com/charliemcelfresh/haikus-html.git
+cd path/to/haikus-html
 rails s
 ```
+
 ### dotenv
-set an environment variable for API key to access haikus-api. [making-requests](https://github.com/charliemcelfresh/haikus-api#making-requests)
+set an environment variable for API key to access haikus-api. ("making requests" part in **haikus-api** page)
 
 ```rb
 ApiKey.create!
