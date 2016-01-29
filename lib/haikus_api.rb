@@ -9,4 +9,8 @@ class HaikusApi
   def self.create_user(user_params)
     post("/users", body: user_params.to_json)
   end
+
+  def self.list_haikus(options={})
+    get("/haikus", options).parsed_response
+  end
 end
